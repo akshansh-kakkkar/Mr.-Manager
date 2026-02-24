@@ -18,7 +18,7 @@ const Task = ({ task }) => {
   };
   return (
     <>
-      <tr className="hover:bg-slate-50">
+      <tr className="hover:bg-slate-50 w-full">
         <td className="p-2 md:p-4 border-b border-slate-200">
           <p
             className="block text-xs md:text-sm text-slate-800 line-clamp-1 truncate cursor-pointer max-w-[80px] md:max-w-[100px]"

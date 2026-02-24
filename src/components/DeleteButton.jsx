@@ -12,9 +12,9 @@ const DeleteButton = () => {
   return (
     <div className="fixed inset-0 bg-[rgba(0,0,0,0.45)] flex items-center justify-center z-10 ">
      
-      <div className="bg-white rounded-xl flex-col w-[20] h-[12] p-3 items-center flex justify-center">
-         <p>Are You sure that you want to continue?</p>
-         <div className="flex justify-end">
+      <div className="bg-white rounded-xl flex-col w-80 h-60 p-3  flex ">
+         <p className="text-xl roboto font-bold text-gray-700 text-left mt-8">Are You sure that you want to continue?</p>
+         <div className="justify-center mt-8">
         <button
           onClick={() => {
             setDeleteModal(false);

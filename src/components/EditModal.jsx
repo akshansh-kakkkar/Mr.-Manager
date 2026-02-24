@@ -33,7 +33,7 @@ const EditTask = () => {
           <form onSubmit={handleUpdate}>
             <div className="flex items-left flex-col ">
             <div className="flex items-center">
-              <label htmlFor="title" className="roboto text-gray-800">Title</label>
+              <label htmlFor="title" className="roboto text-gray-800">Title : </label>
               <input
                 required
                 placeholder="I am empty :)"
@@ -46,7 +46,7 @@ const EditTask = () => {
               />
             </div>
             <div className="flex items-center">
-              <label htmlFor="description" className="roboto text-gray-800">Desc</label>
+              <label htmlFor="description" className="roboto text-gray-800">Desc : </label>
               <input
                 type="text"
                 placeholder="add something...."
@@ -59,7 +59,7 @@ const EditTask = () => {
               />
             </div>
             <div className="flex items-center">
-              <label htmlFor="priority" className="roboto text-gray-800">Priority</label>
+              <label htmlFor="priority" className="roboto text-gray-800">Priority : </label>
               <select
                 required
                 type="text"
@@ -73,12 +73,12 @@ const EditTask = () => {
                 <option value="high">High</option>
               </select>
             </div>
-            <div className="flex justify-center gap-5">
-              <button onClick={() => seteditingTask(null)}>cancel</button>
+            <div className="flex justify-end gap-5">
+              <button onClick={() => seteditingTask(null)} className="bg-red-500 hover:scale-[95%] hover:bg-red-600 transition-all duration-300 text-white roboto py-1 px-2 rounded-xl text-xl">cancel</button>
 
               <button
                 type="submit"
-                className="bg-blue-400 text-white roboto py-1 px-2 rounded-xl text-xl"
+                className="bg-blue-400 text-white hover:scale-[95%] hover:bg-blue-500 transition-all duration-300 roboto py-1 px-2 rounded-xl text-xl"
               >
                 Update
               </button>
