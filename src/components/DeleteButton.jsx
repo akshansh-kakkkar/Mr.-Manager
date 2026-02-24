@@ -10,34 +10,52 @@ const DeleteButton = () => {
   } = useContext(taskContext);
   if (!deleteModal) return null;
   return (
-    <div className="fixed inset-0 bg-[rgba(0,0,0,0.45)] flex items-center justify-center z-10 ">
-     
-      <div className="bg-white rounded-xl flex-col w-80 h-60 p-3  flex ">
-         <p className="text-xl roboto font-bold text-gray-700 text-left mt-8">Are You sure that you want to continue?</p>
-         <div className="justify-center mt-8">
-        <button
-          onClick={() => {
-            setDeleteModal(false);
-            setDeleteTaskId(null);
-          }}
-          className="bg-white cursor-pointer border-2 roboto text-xl hover:bg-red-500 hover:text-white hover:scale-[102%] hover:-translate-y-1 transition-all duration-200 border-red-500 px-4 py-2 m-3 rounded-2xl text-red-500 "
+   
+      // <div
+      //   data-dialog-backdrop="modal-md"
+      //   data-dialog-backdrop-close="true"
+      //   className="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-1 backdrop-blur-sm transition-opacity duration-300"
+      // >
+         <div className="fixed inset-0 bg-[rgba(0,0,0,0.45)] flex items-center justify-center z-10 ">
+        <div
+          data-dialog="modal-sm"
+          className="relative m-4 p-4 w-1/3 min-w-[350px] max-w-1/3 rounded-lg bg-white shadow-sm"
         >
-          Cancel
-        </button>
-        <button
-          onClick={() => {
-            if (deleteTaskId === null) return;
-            dispatch({ type: "Delete_Task", payload: deleteTaskId });
-            setDeleteModal(false);
-            setDeleteTaskId(null);
-          }}
-          className="bg-red-500 px-5 roboto hover:bg-white cursor-pointer hover:text-red-500 hover:border-2 hover:border-red-500 hover:scale-[95%] transition-all duration-300 hover:-translate-y-1 text-2xl py-2 m-3 rounded-2xl text-white"
-        >
-          Yes
-        </button>
+          <div className="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+            Delete{" "}
+          </div>
+          <div className="relative border-t border-slate-200 py-4 leading-normal text-left text-slate-600 font-light">
+            Are You sure you want to delete this task this action is irreversible click confirm to delete.
+          </div>
+          <div className="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+            <button
+              onClick={() => {
+                setDeleteModal(false);
+                setDeleteTaskId(null);
+              }}
+              data-dialog-close="true"
+              className="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              data-dialog-close="true"
+              onClick={() => {
+                if (deleteTaskId === null) return;
+                dispatch({ type: "Delete_Task", payload: deleteTaskId });
+                setDeleteModal(false);
+                setDeleteTaskId(null);
+              }}
+              className="rounded-md bg-red-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
+              type="button"
+            >
+              Confirm
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

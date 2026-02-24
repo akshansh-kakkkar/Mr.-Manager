@@ -7,41 +7,44 @@ const ExpandTaskModel = () => {
   return (
     <>
       <div className="fixed inset-0 bg-[rgba(0,0,0,0.45)] flex items-center justify-center z-10">
-        <div className="bg-blue-50 rounded-xl flex-col w-full max-w-md p-6 items-left flex justify-left mx-4">
-          <div className="flex  gap-2 text-left justify-start m-4">
-            <h2 className="font-bold text-2xl roboto text-gray-800">
-              Title :{" "}
-            </h2>
-            <h2 className="font-semibold text-2xl roboto text-gray-800">
-              {viewMore.title}
-            </h2>
+         <div className="fixed inset-0 bg-[rgba(0,0,0,0.45)] flex items-center justify-center z-10 ">
+        <div
+          data-dialog="modal-sm"
+          className="relative m-4 p-4 w-1/3 min-w-[400px] max-w-1/2 rounded-lg bg-white shadow-sm"
+        >
+          <div className="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+            Title{" "}
           </div>
-          <div className="flex items-left gap-2 text-left flex-col justify-start mx-4">
-            <h2 className="font-bold text-xl roboto text-gray-800">
-              Description :{" "}
-            </h2>
-            <h2 className="font- text-sm text-gray-500">
-              {viewMore.description}
-            </h2>
+          <div className="relative border-t border-slate-200 py-4 leading-normal text-left text-slate-600 font-light">
+            {viewMore.title}
           </div>
-          <div className="flex items-left gap-2 text-left my-2 flex-col justify-start mx-4">
-            <h2 className="font-bold text-xl roboto text-gray-800">
-              Priority :{" "}
-            </h2>
-            <h2 className="font- text-xl bg-white items-center rounded-xl text-center p-2 text-gray-800 ">
-              {viewMore.priority}
-            </h2>
+                    <div className="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+            Description{" "}
           </div>
-          <div
-            onClick={() => setViewMore(null)}
-            className="bg-red-500  px-5 roboto hover:bg-white cursor-pointer hover:text-red-500 hover:border-2 hover:border-red-500 hover:scale-[95%] transition-all duration-300 hover:-translate-y-1 text-2xl py-2 m-3 rounded-2xl text-white"
-          >
-            <button>close</button>
+          <div className="relative border-t border-slate-200 py-4 leading-normal text-left text-slate-600 font-light">
+            {viewMore.description}
+          </div>
+                    <div className="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+            Priority{" "}
+          </div>
+          <div className="relative border-t border-slate-200 py-4 leading-normal text-left text-slate-600 font-light">
+            {viewMore.priority}
+          </div>
+          <div className="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+            <button
+              data-dialog-close="true"
+              className="rounded-md bg-red-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
+              type="button"  onClick={() => setViewMore(null)}
+            >
+              close
+            </button>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
 };
 
 export default ExpandTaskModel;
+
