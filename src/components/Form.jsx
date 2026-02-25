@@ -45,7 +45,7 @@ const Form = () => {
             required
           />
           <input
-            className="outline-none text-sm sm:text-lg bg-white p-2 text-gray-700 roboto font-medium rounded-xl placeholder:text-gray-500 flex-1 sm:flex-none"
+            className="outline-none  text-sm sm:text-lg bg-white p-2 text-gray-700 roboto font-medium rounded-xl placeholder:text-gray-500 flex-1 sm:flex-none"
             type="text"
             onChange={(e) =>
               setFormData({ ...formData, description: e.target.value })
