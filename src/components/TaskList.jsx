@@ -7,7 +7,7 @@ const TaskList = () => {
   return (
     <>
       <div className="w-full text-gray-700 bg-white shadow-md rounded-lg bg-clip-border overflow-hidden">
-        <div className="overflow-y-auto h-[150px]">
+        <div className="overflow-y-auto h-[180px]">
           <table className="w-full text-center table-auto text-xs sm:text-sm">
             <thead className="sticky top-0 z-10">
               <tr>
