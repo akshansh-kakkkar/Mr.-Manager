@@ -6,15 +6,15 @@
 ---
 
 ## Tech Stack 
-`React`
+- `React`
 `TailwindCSS`
-`Figma`
+- `Figma`
 
 ---
 ## Credits
-`Lordicons (for animated Icons)`
-`Material Tailwind (for modal UI)`
+- `Lordicons (for animated Icons)`
+- `Material Tailwind (for modal UI)`
 ---
 
 ## Deplooy Link
-` https://mr-manager-zeta.vercel.app/ `
+-  https://mr-manager-zeta.vercel.app/ 
