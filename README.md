@@ -7,7 +7,7 @@
 
 ## Tech Stack 
 - `React`
-`TailwindCSS`
+- `TailwindCSS`
 - `Figma`
 
 ---
