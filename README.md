@@ -16,5 +16,5 @@
 - `Material Tailwind (for modal UI)`
 ---
 
-## Deplooy Link
+## Deploy Link
 -  https://mr-manager-zeta.vercel.app/ 
